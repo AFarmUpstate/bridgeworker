@@ -1,0 +1,19 @@
+So, these may not be actually useful afterall:
+
+It occurs to me that instead of managing a suite of apps that talk to
+services, the better solution would be to use AWS Lambda.
+
+https://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html
+
+This requires using node.js & kinesis (@ $0.015/hr ~ $.36 day)
+http://aws.amazon.com/kinesis/pricing/
+
+ea lamba would contain keys out
+    ea incoming record contains token and minimal info in.
+
+limits
+* kinesis records limited to 50K max (50K can contain smaller records)
+** use s3 for data? Poll from bridge lambda worker?
+    http://aws.amazon.com/s3/pricing/
+* How communicate status back? Is that even needed?
+
