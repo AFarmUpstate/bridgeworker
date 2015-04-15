@@ -5,17 +5,17 @@ services, the better solution would be to use AWS Lambda.
 
 https://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html
 
-This requires using node.js & kinesis (@ $0.015/hr ~ $.36 day)
-http://aws.amazon.com/kinesis/pricing/
+This requires using node.js and an event generator (most AWS funcs qualify)
 
 ea lamba would contain keys out
     ea incoming record contains token and minimal info in.
 
 limits
-* kinesis records limited to 50K max (50K can contain smaller records)
-** use s3 for data? Poll from bridge lambda worker?
-    http://aws.amazon.com/s3/pricing/
-* How communicate status back? Is that even needed?
+* lambda funcs are auto killed @ 60s (how will this impact iOS feed?)
+* monitor dynamodb table for inserts.
+** can we collect into batches?
+
+should we just route through sns? http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html
 
 
 Twisted Intro: http://krondo.com/blog/?page_id=1327
