@@ -17,3 +17,9 @@ limits
     http://aws.amazon.com/s3/pricing/
 * How communicate status back? Is that even needed?
 
+
+Twisted Intro: http://krondo.com/blog/?page_id=1327
+Concurrency intro:
+http://www.artima.com/weblogs/viewpost.jsp?thread=230001
+
+
