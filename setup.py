@@ -18,7 +18,7 @@ extra_options = {
 
 setup(name="AutoPush",
       version=__version__,
-      description='PunterGatherer Push Queue Manager',
+      description='bridgeworker - Push Proprietary Protocol Bridge worker',
       long_description=README + '\n\n' + CHANGES,
       classifiers=["Topic :: Internet :: WWW/HTTP",
                    "Programming Language :: Python :: Implementation :: PyPy",
@@ -48,8 +48,8 @@ setup(name="AutoPush",
       ],
       entry_points="""
       [console_scripts]
-      pg_gcm = puntergatherer.gcm:main
-      pg_apns = puntergatherer.apns:main
+      bw_gcm = bridgeworker.gcm:main
+      bw_apns = bridgeworker.apns:main
       """,
       **extra_options
       )
